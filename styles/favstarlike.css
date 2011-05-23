@@ -1,0 +1,23 @@
+@charset"UTF-8";
+
+.theTweet {
+  line-height: 1.4;
+  color: #333333;
+}
+.theTweet a {
+  color: #1a75d2;
+}
+.cofav2 {
+  font-weight: bold;
+  color: #008e00;
+}
+.cofav3, .cofav4 {
+  font-weight: bold;
+  color: #5f008f;
+}
+.cofav5 {
+  line-height: 1.3;
+  font-weight: bold;
+  color: #f40000;
+}
+
