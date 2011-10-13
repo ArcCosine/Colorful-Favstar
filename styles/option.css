@@ -1,8 +1,14 @@
 @charset "UTF-8";
 
-html, body, dl, dt, dd, h1 {
+html, body, dl, dt, dd, h1, input, section {
+	font-size: 18px;
   padding: 0px;
   margin: 0px;
+	line-height: 1.0;
+}
+
+dl {
+	margin: 16px;
 }
 
 dt {
@@ -15,10 +21,21 @@ dd {
 }
 
 body {
-  font-size: 16px;
+  font-size: 18px;
+	line-height: 1.2;
 }
 
 h1 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
+	margin: 18px;
+}
+
+input {
+	padding: 0.3em 0.5em;
+}
+
+input[type=text] {
+	line-height: 1.2em;
+	width: 400px;
 }
