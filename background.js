@@ -27,6 +27,16 @@ function onMessage(event) {
         var path = message.data;
         loadInjectedCSS(event, path);
     }
+
+
+	console.log(widget.preferences.adsSelector);
+	// Undisplay objects
+	if( typeof widget.preferences.adsSelector === void 0 ) {
+		var nodes = document.querySelectorAll(widget.preferences.adsSelector);
+		for( var l = nodes.length; l-- > 0 ; ) {
+			nodes[l].style.display = "none";
+		}
+	}
 }
 
 window.addEventListener('DOMContentLoaded', function() {
