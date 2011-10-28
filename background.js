@@ -29,7 +29,6 @@ function onMessage(event) {
     }
 
 
-	console.log(widget.preferences.adsSelector);
 	// Undisplay objects
 	if( typeof widget.preferences.adsSelector === void 0 ) {
 		var nodes = document.querySelectorAll(widget.preferences.adsSelector);

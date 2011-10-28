@@ -2,7 +2,7 @@
 // @name           colorful_favstar
 // @namespace      http://looxu.blogspot.com/
 // @description    Change favstar text like fabotter.
-// @version        2.0
+// @version        1.1
 // @include        http://favstar.fm/*
 // @include        http://ja.favstar.fm/*
 // @include        http://de.favstar.fm/*
@@ -26,10 +26,7 @@
 				if( !widget.preferences.adsSelector ){
 					widget.preferences.adsSelector = "#bonusFeatureCallout,#signInCallout, .friends_with_bonus";
 				}
-
-				var addingCSS = widget.preferences.adsSelector + " { display: none !important; }";
-
-				css += addingCSS;
+				css += widget.preferences.adsSelector + " { display: none !important; }";
 
 
 				// Create a <style> element and add it to the <head> element of the current page.
