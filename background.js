@@ -31,8 +31,10 @@ function onMessage(event) {
 
 	// Undisplay objects
 	if( typeof widget.preferences.adsSelector === void 0 ) {
-		var nodes = document.querySelectorAll(widget.preferences.adsSelector);
-		for( var l = nodes.length; l-- > 0 ; ) {
+		var nodes = document.querySelectorAll(widget.preferences.adsSelector),
+			i = 0,
+			iz = nodes.length;
+		for( ;i<iz ; i++ ) {
 			nodes[l].style.display = "none";
 		}
 	}
