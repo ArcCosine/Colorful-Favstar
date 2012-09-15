@@ -2,7 +2,7 @@
 // @name           colorful_favstar
 // @namespace      http://looxu.blogspot.com/
 // @description    Change favstar text like fabotter.
-// @version        1.1
+// @version        1.3
 // @include        http://favstar.fm/*
 // @include        http://ja.favstar.fm/*
 // @include        http://de.favstar.fm/*
@@ -24,9 +24,9 @@
 				var css = message.data.css;
 
 				if( !widget.preferences.adsSelector ){
-					widget.preferences.adsSelector = "#bonusFeatureCallout,#signInCallout, .friends_with_bonus";
+					widget.preferences.adsSelector = '#bonusFeatureCallout,#signInCallout, .friends_with_bonus';
 				}
-				css += widget.preferences.adsSelector + " { display: none !important; }";
+				css += widget.preferences.adsSelector + ' { display: none !important; }';
 
 
 				// Create a <style> element and add it to the <head> element of the current page.
@@ -52,16 +52,25 @@
 	}
 
 	function init(){
-		var tweetNodes = _d.querySelectorAll('.theTweet');
-		for (var i=tweetNodes.length; i-- > 0; ){
-			var pnode = tweetNodes[i].parentNode.parentNode.parentNode;	//.tweetWithStats
-			var favNode = pnode.querySelector(".count");
-			var fav = parseInt(favNode.innerHTML, 10);
+
+		//Change simple logic.
+		var pnodeSelector = '.fs-tweet',
+			countSelector = '.fs-total',
+			tweetSelector = '.fs-tweet-text',
+			pnodes = _d.querySelectorAll(pnodeSelector),
+			i = 0,
+			iz = pnodes.length,
+			pnode,
+			favNode,
+			tweetNode;
+
+		for (; i < iz; i++ ){
+			pnode = pnodes[i];
+			favNode = pnode.querySelector(countSelector);
+			fav = parseInt(favNode.textContent, 10);
 			if (!isNaN(fav) && fav >= 1) {
-				if( fav > 5 ){
-					fav = 5;
-				}
-				tweetNodes[i].className += ' cofav'+fav;
+				tweetNode = pnode.querySelector(tweetSelector);
+				tweetNode.className += ' cofav'+(fav > 5 ? 5 : fav);
 			}
 		}
 	}
@@ -69,4 +78,6 @@
 	insertCSS();
 
 	_w.addEventListener('DOMContentLoaded', init, false );
+
 })(document, window);
+
