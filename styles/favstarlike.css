@@ -1,17 +1,17 @@
 @charset"UTF-8";
 
 #fs-feed-list > li > .fs-tweet > .fs-content > p.cofav2 {
-	font-weight: bold;
-	color: #008e00;
+	font-weight: bold !important;
+	color: #008e00 !important;
 }
 
 #fs-feed-list > li > .fs-tweet > .fs-content > p.cofav3, #fs-feed-list > li > .fs-tweet > .fs-content > p.cofav4 {
-	font-weight: bold;
-	color: #5f008f;
+	font-weight: bold !important;
+	color: #5f008f !important;
 }
 
 #fs-feed-list > li > .fs-tweet > .fs-content > p.cofav5 {
-	font-weight: bold;
-	color: #f40000;
+	font-weight: bold !important;
+	color: #f40000 !important;
 }
 

@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+
+	"name": "Coloful favstar",
+	"description": "favstar.fm change color.like to favotter",
+	"version": "1.0",
+	"content_scripts" : [
+	{
+		"matches" : ["http://*.favstar.fm/*"],
+		"css" : ["styles/favstarlike.css"],
+		"js" : ["includes/colorful.js"]
+	}],
+	"icons" : {
+		"48" : "icons/colorful48.png",
+		"64" : "icons/colorful64.png"
+	}
+
+}
